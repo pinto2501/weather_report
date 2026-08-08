@@ -1,4 +1,4 @@
-# CS2316 Final Project — Weather Shocks and Agricultural Commodity Futures
+# CS2316 Final Project: Weather Shocks and Agricultural Commodity Futures
 
 An end-to-end data collection, cleaning, and analysis project examining whether U.S. weather
 conditions measurably influence agricultural commodity futures prices.
@@ -7,8 +7,6 @@ conditions measurably influence agricultural commodity futures prices.
 creates supply uncertainty, pushing futures prices up; favorable growing weather raises expected
 supply and pressures prices down. The notebooks test this against USDA price data, NOAA storm
 event records, and FRED corn price history.
-
-**Video presentation:** https://youtu.be/xHam3ZdZOY0
 
 ---
 
@@ -119,12 +117,3 @@ Two cells need attention before a full re-run:
 
 The two offline parsers (`data_parser` and `extra_source1`) run without network access and
 reproduce their committed outputs byte-for-byte.
-
-## Cited references
-
-- [matplotlib annotated heatmap gallery](https://matplotlib.org/stable/gallery/images_contours_and_fields/image_annotated_heatmap.html)
-- [pandas `DataFrame.groupby` documentation](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.groupby.html)
-
-## License
-
-[MIT](LICENSE)
