@@ -60,36 +60,35 @@ Four cleaning functions, each of which reads a source, transforms it, and writes
 
 ### Data inconsistencies handled
 
-1. **NaNs** in `futures_exchange`, `unit`, and `item` — found with `df.isna().sum()`, filled with
+1. **NaNs** in `futures_exchange`, `unit`, and `item` found with `df.isna().sum()`, filled with
    domain-appropriate values rather than dropped.
-2. **Mixed date formats** (`MM/DD/YYYY` vs `YYYY-MM-DD`) — normalized to `YYYY-MM-DD` and
+2. **Mixed date formats** (`MM/DD/YYYY` vs `YYYY-MM-DD`). Normalized to `YYYY-MM-DD` and
    converted with `pd.to_datetime()`.
-3. **Empty strings** in the magnitude column acting as hidden nulls — replaced with `"None"`.
-4. **Float year columns** rendering as `2010.0` — cast to string with the `.0` suffix stripped.
+3. **Empty strings** in the magnitude column acting as hidden nulls replaced with `"None"`.
+4. **Float year columns** rendering as `2010.0` cast to string with the `.0` suffix stripped.
 
 ## Analysis (Phase III)
 
 **Insights**
 
-1. Worst-performing marketing year by futures basis — 2010 across all four commodities; cotton
+1. Worst-performing marketing year by futures basis: 2010 across all four commodities; cotton
    shows the lowest dispersion.
-2. WASDE forecast accuracy — percent error between forecast and price actually received; forecasts
+2. WASDE forecast accuracy: percent error between forecast and price actually received; forecasts
    skew toward overestimation.
-3. Basis volatility by marketing year (`mean`/`std`/`min`/`max`, filtered to std > 0.5) — 2007,
+3. Basis volatility by marketing year (`mean`/`std`/`min`/`max`, filtered to std > 0.5): 2007,
    2010, and 2012 are the most volatile, all with negative mean basis.
 4. Correlation between monthly storm-event counts and 12-month rolling corn return volatility
    (~0.5).
-5. Storm event distribution by type and year — convective events (thunderstorm wind, hail, flood)
+5. Storm event distribution by type and year: convective events (thunderstorm wind, hail, flood)
    account for >75% of incidents during the growing season.
 
 **Visualizations**
 
-1. Corn price vs. its log-difference transform, each with rolling mean and std — demonstrates the
+1. Corn price vs. its log-difference transform, each with rolling mean and std demonstrates the
    move from non-stationary to stationary (matplotlib).
 2. Stacked bar of monthly storm events by type, overlaid with corn futures percent change
    (plotly).
-3. 4×4 heatmap of cross-commodity basis-volatility correlations — corn/soybeans highest at 0.63
-   (matplotlib).
+3. 4×4 heatmap of cross-commodity basis-volatility correlations. 
 
 ## Running it
 
@@ -108,7 +107,7 @@ jupyter notebook notebooks/phase3_analysis.ipynb
 
 Two cells need attention before a full re-run:
 
-- **`API_KEY`** in the Weatherstack cell is a placeholder — substitute a real
+- **`API_KEY`** in the Weatherstack cell is a placeholder. To use, substitute a real
   [weatherstack.com](https://weatherstack.com) key. The committed
   `data/processed/weatherstack_corn_belt.csv` is a saved snapshot, so the rest of the notebook
   runs without one.
