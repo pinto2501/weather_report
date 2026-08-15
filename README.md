@@ -14,8 +14,8 @@ event records, and FRED corn price history.
 
 ```
 notebooks/
-  phase2_data_collection.ipynb   Data collection + cleaning, inconsistency write-up
-  phase3_analysis.ipynb          Full submission: parsers + 5 insights + 3 visualizations
+  data_collection.ipynb   Data collection + cleaning, inconsistency write-up
+  analysis.ipynb          Full submission: parsers + 5 insights + 3 visualizations
 data/
   raw/
     usda_price_forecasts.csv     USDA ERS season-average price forecasts (~16 MB)
