@@ -1,4 +1,4 @@
-# Weather Impact on U.S. Agricultural Futures Prices
+## Weather Impact on U.S. Agricultural Futures Prices
 
 An end-to-end data collection, cleaning, and analysis project examining whether U.S. weather
 conditions measurably influence agricultural commodity futures prices.
