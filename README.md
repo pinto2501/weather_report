@@ -95,7 +95,7 @@ repository root and open a notebook from `notebooks/`:
 jupyter notebook notebooks/phase3_analysis.ipynb
 ```
 
-Two cells need attention before a full re-run:
+Note:
 
 - **`API_KEY`** in the Weatherstack cell is a placeholder. To use, substitute a real
   [weatherstack.com](https://weatherstack.com) key. The committed
@@ -103,6 +103,3 @@ Two cells need attention before a full re-run:
   runs without one.
 - **`web_parser1`** scrapes NOAA live and depends on that page's current table layout; if NOAA
   changes the markup, use the committed `data/processed/noaa_storm_events.csv` instead.
-
-The two offline parsers (`data_parser` and `extra_source1`) run without network access and
-reproduce their committed outputs byte-for-byte.
