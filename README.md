@@ -6,8 +6,6 @@ creates supply uncertainty, pushing futures prices up; favorable growing weather
 supply and pressures prices down. The notebooks test this against USDA price data, NOAA storm
 event records, and FRED corn price history.
 
----
-
 ## Repository layout
 
 ```
